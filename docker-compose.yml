@@ -1,0 +1,14 @@
+version: '1.0'
+
+name: task-tracker
+services:
+  task-tracker-db:
+    image: postgres:16.1
+    container_name: task-tracker-postgres_db
+    ports:
+      - '6432:5432'
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=task_tracker_db
+      - TZ=Europe/Moscow
