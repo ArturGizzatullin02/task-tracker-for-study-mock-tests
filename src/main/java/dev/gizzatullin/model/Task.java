@@ -15,6 +15,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+import java.util.Objects;
+
 @Getter
 @Setter
 @ToString
@@ -45,7 +47,7 @@ public class Task {
         if (this == o) return true;
         if (!(o instanceof Task task)) return false;
 
-        return id == task.id;
+        return Objects.equals(id, task.id);
     }
 
     @Override
